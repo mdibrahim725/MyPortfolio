@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h2 class="text-light">{{ project.title }}</h2>
+    <div class="row">
+        {% for img in project.images %}
+        <div class="col-md-6 my-2">
+            <img src="{% static img %}" class="img-fluid">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

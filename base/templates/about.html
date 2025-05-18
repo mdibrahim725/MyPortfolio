@@ -1,0 +1,44 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<div class="row my-5">
+    <div class="col-4 d-flex justify-content-center align-items-center">
+        <img src="{% static "images/Photo.jpg" %}" alt="image" class="about-image">
+    </div>
+    
+    <div class="col-7 text-left text-light">
+        <div class="about-profile">
+        <h1>Hello !</h1>
+        <h2>I am <span>Mohammmed Ibrahim</span></h2>
+        <p>I am an aspiring Backend Developer with a strong interest in web development using Python and Django. As a fresher, I have built several academic and personal projects that demonstrate my ability to create functional and efficient web applications. I am comfortable working with databases, developing RESTful APIs, and managing the backend logic of websites.
+Currently, I am focused on improving my skills in backend development and contributing to real-world projects.</p>
+    </div>
+    </div>
+</div>
+<div class="row my-2">
+    <h2 class="text-center" style="color: #4fffb0;">My Tech Stack</h2>
+    <div class="d-flex justify-content-around align-items-center">
+        <img src="{% static "images/html.png" %}" 
+        alt="html" 
+        width="70"
+        height="70" 
+        class="img-fluid">
+        <img src="{% static "images/css.png" %}"
+        width="70"
+        height="70" 
+        alt="css" class="img-fluid">
+        <img src="{% static "images/python.png" %}"
+        width="70"
+        height="70" 
+        alt="css" class="img-fluid">
+        <img src="{% static "images/django.png" %}"
+        width="70"
+        height="70" 
+        alt="css" class="img-fluid">
+        <img src="{% static "images/sql.png" %}" 
+        width="70"
+        height="70" 
+        alt="css" class="img-fluid">
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="form-container">
+    <h2>Contact<span style="color: aqua;"> Me !</span></h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <br>
+        <button type="submit">Send</button>
+    </form>
+</div>
+{% if messages %}
+  <script>
+    {% for message in messages %}
+      alert("{{ message }}");
+    {% endfor %}
+  </script>
+{% endif %}
+{% endblock content %}

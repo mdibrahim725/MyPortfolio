@@ -1,0 +1,47 @@
+{% extends "main.html" %}
+{% block content %}
+{% load static %}
+<section class="home"> 
+    <div class="profile-image">
+            <img src="{% static "images/profile2.png" %}" alt="Image">
+      </div>
+      <div class="home-content">
+          <h1>Hi ,It's <span>Mohammed Ibrahim</span></h1>
+          <h3 class="typing-text">I'm a <span id="rotating"></span></h3>
+          <p>I am an aspiring Backend Developer with a strong interest in web development using Python and Django. As a fresher, I have built several academic and personal projects that demonstrate my ability to create functional and efficient web applications. I am comfortable working with databases, developing RESTful APIs, and managing the backend logic of websites.
+Currently, I am focused on improving my skills in backend development and contributing to real-world projects.</p>
+          <div class="social-icon">
+                <a href="https://www.linkedin.com/in/c-mohammed-ibrahim-411510280/" target="_blank" class="ms-3">
+                    <img class="social-links" src="{% static "images/linkedin-logo.png" %}" alt="images/linkedin-logo.png" width="50" height="50">
+                </a>
+                <a href="https://github.com/mdibrahim725" target="_blank" class="ms-3">
+                    <img class="social-links-github" src="{% static "images/github.png" %}" alt="images/github.png" width="50" height="50">
+                </a>
+                <a href="https://github.com/mdibrahim725" target="_blank" class="ms-3">
+                    <img class="social-links-insta" src="{% static "images/instagram.png" %}" alt="images/instagram.png" width="50" height="50">
+                </a>
+                <div class="dow-btn">
+                    <a href="{% static "images/resume.pdf" %}" target="_blank">Download Resume</a>
+                </div>
+          </div>
+      </div>
+    </div>
+</section>
+<script>
+    const texts =['Fresher','Software Developer','Python Developer','Backend Developer'];
+    let index = 0;
+    const rotating = document.getElementById("rotating");
+    function rotateText(){
+        rotating.style.opacity =0;
+        setTimeout(() =>{
+            rotating.textContent = texts[index];
+            rotating.style.opacity = 1;
+            index = (index + 1) % texts.length;
+        },500);
+    }
+    setInterval(rotateText, 2500);
+    rotateText();
+</script>
+
+{% endblock content %}
+

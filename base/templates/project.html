@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<div class="row my-2">
+ <h1 class="pro-head">Project</h1>   
+    {% for i in project_details %}
+    <div class="col-6 ">
+        <div class="project-image">
+            <h4>{{i.title}}</h4>
+            <center>
+                <a href="{% url "project_detail" forloop.counter %}"><img src="{% static i.path %}" width="500" height="800" class="img-fluid" id="pro-img"></a>
+            </center> 
+            <p class="text-light">{{i.desc}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
